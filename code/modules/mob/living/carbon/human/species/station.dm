@@ -79,6 +79,61 @@
 /datum/species/unathi/handle_death(var/mob/living/carbon/human/H)
 	H.stop_tail_wagging(1)
 
+/datum/species/dragon
+	name = "Dragon"
+	name_plural = "Dragons"
+	icobase = 'icons/mob/human_races/r_lizard.dmi'
+	deform = 'icons/mob/human_races/r_def_lizard.dmi'
+	path = /mob/living/carbon/human/dragon
+	default_language = "Galactic Common"
+	language = "Sinta'unathi"
+	tail = "dragon_andy"
+	unarmed_type = /datum/unarmed_attack/claws
+	primitive_form = "Stok"
+
+	species_traits = list(LIPS, IS_WHITELISTED)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_TAIL | HAS_HEAD_ACCESSORY | HAS_BODY_MARKINGS | HAS_HEAD_MARKINGS | HAS_SKIN_COLOR | HAS_ALT_HEADS | TAIL_WAGGING
+
+//	dietflags = DIET_CARN
+	dietflags = DIET_OMNI
+
+	flesh_color = "#34AF10"
+	reagent_tag = PROCESS_ORG
+	base_color = "#066000"
+	//Default styles for created mobs.
+	default_headacc = "Simple"
+	default_headacc_colour = "#404040"
+	butt_sprite = "unathi"
+
+	has_organ = list(
+		"heart" =    /obj/item/organ/internal/heart,
+		"lungs" =    /obj/item/organ/internal/lungs,
+		"liver" =    /obj/item/organ/internal/liver/unathi,
+		"kidneys" =  /obj/item/organ/internal/kidneys,
+		"brain" =    /obj/item/organ/internal/brain,
+		"appendix" = /obj/item/organ/internal/appendix,
+		"eyes" =     /obj/item/organ/internal/eyes/unathi //3 darksight.
+		)
+
+	allowed_consumed_mobs = list(/mob/living/simple_animal/mouse, /mob/living/simple_animal/lizard, /mob/living/simple_animal/chick, /mob/living/simple_animal/chicken,
+								 /mob/living/simple_animal/crab, /mob/living/simple_animal/butterfly, /mob/living/simple_animal/parrot, /mob/living/simple_animal/tribble)
+
+	suicide_messages = list(
+		"is attempting to bite their tongue off!",
+		"is jamming their claws into their eye sockets!",
+		"is twisting their own neck!",
+		"is holding their breath!")
+
+/datum/species/dragon/handle_post_spawn(var/mob/living/carbon/human/H)
+	spawn(10)
+		if(H.mind && H.mind.spell_list.len == 0)
+			H.mind.AddSpell(new /obj/effect/proc_holder/spell/dragonfireball(null))
+	..()
+
+/datum/species/dragon/handle_death(var/mob/living/carbon/human/H)
+	H.stop_tail_wagging(1)
+
 /datum/species/tajaran
 	name = "Tajaran"
 	name_plural = "Tajaran"
@@ -539,7 +594,7 @@
 	male_cough_sounds = list('sound/effects/slime_squish.ogg')
 	female_cough_sounds = list('sound/effects/slime_squish.ogg')
 
-	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS, NO_SCAN)
+	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_COLOR | NO_EYES
 //	dietflags = DIET_CARN
@@ -594,7 +649,7 @@
 	male_cough_sounds = list('sound/effects/slime_squish.ogg')
 	female_cough_sounds = list('sound/effects/slime_squish.ogg')
 
-	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS, NO_SCAN)
+	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_COLOR | NO_EYES | HAS_TAIL | TAIL_WAGGING | HAS_HEAD_ACCESSORY | HAS_BODY_MARKINGS | HAS_ALT_HEADS
 //	dietflags = DIET_CARN

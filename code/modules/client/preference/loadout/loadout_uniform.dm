@@ -574,3 +574,21 @@
 /datum/gear/uniform/under/cuttopred
 	display_name = "red cut top"
 	path =/obj/item/clothing/under/cuttop_red
+
+//added in by Luke Vale
+
+/datum/gear/uniform/under/purp_skirt
+	display_name = "purple sweater skirt"
+	path =/obj/item/clothing/under/purp_skirt
+
+/datum/gear/uniform/virgin_s
+	display_name = "vs sweater, light blue"
+	path =/obj/item/clothing/under/v_sweater_lblue
+
+/datum/gear/uniform/amishsuit
+	display_name = "amish suit"
+	path = /obj/item/clothing/under/sl_suit
+
+/datum/gear/uniform/amishsuit
+	display_name = "amish suit"
+	path = /obj/item/clothing/under/sl_suit

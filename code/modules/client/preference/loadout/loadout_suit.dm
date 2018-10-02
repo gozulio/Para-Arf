@@ -158,3 +158,21 @@
 /datum/gear/suit/purplesuit
 	display_name = "suit jacket, purple"
 	path = /obj/item/clothing/suit/storage/lawyer/purpjacket
+
+//Added in by Luke Vale
+
+/datum/gear/suit/labcoat_fur
+	display_name = "labcoat, formal"
+	path = /obj/item/clothing/suit/storage/labcoat/fur
+
+/datum/gear/suit/faded_b
+	display_name = "faded blue jacket"
+	path = /obj/item/clothing/suit/faded/blue
+
+/datum/gear/suit/vicred
+	display_name = "the ladies victorian coat, red"
+	path = /obj/item/clothing/suit/victcoat/red
+
+/datum/gear/suit/vic
+	display_name = "the ladies victorian coat, black"
+	path = /obj/item/clothing/suit/victcoat

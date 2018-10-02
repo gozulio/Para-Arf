@@ -838,3 +838,23 @@
 	item_state = "medicalgown"
 	item_color = "medicalgown"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+
+//added in by Luke Vale
+
+/obj/item/clothing/under/purp_skirt
+	name = "purple sweater skirt"
+	desc = "A dark purple sweater with a black skirt and pink undershirt."
+	icon_state = "purp_skirt"
+	item_color = "purp_skirt"
+	item_state = "purp_skirt"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
+
+/obj/item/clothing/under/v_sweater_lblue
+	name = "virgin killer sweater"
+	desc = "A odd sweater, the design is ment to be highly procitive, and it won't provide all to much warmth. This is is light blue."
+	icon_state = "v_sweater"
+	item_color = "v_sweater"
+	item_state = "v_sweater"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
